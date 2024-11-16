@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct CarroselTabView: View {
+    let bannerList: [ServiceType] = [ServiceType(id: 1, nome: "", imagem: "charmander"),
+                                     ServiceType(id: 2, nome: "", imagem: "charmeleon"),
+                                     ServiceType(id: 3, nome: "", imagem: "charizard"),]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView{
+            ForEach(bannerList){
+                banner in CarroselItemView(banner: banner)
+            }
+        }.frame(width: 250).tabViewStyle(.page(indexDisplayMode: .always))
     }
 }
 

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct GoalType: Identifiable{
+    let id : Int
+    let icone : String
+    let titulo : String
+    let descricao : String
+}
+

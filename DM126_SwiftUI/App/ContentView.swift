@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationBar()
+        ScrollView{
+            VStack(spacing:50){
+                FeatureGrid()
+                CarroselTabView().frame(minHeight: 200)
+                GoalContainer()
+            } .padding()
         }
-        .padding()
     }
 }
 
