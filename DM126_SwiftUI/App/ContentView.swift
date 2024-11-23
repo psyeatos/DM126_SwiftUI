@@ -12,6 +12,7 @@ struct ContentView: View {
         NavigationBar()
         ScrollView{
             VStack(spacing:50){
+                ApiView()
                 FeatureGrid()
                 CarroselTabView().frame(minHeight: 200)
                 GoalContainer()
